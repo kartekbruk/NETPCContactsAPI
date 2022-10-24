@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETPCContactsAPI", "NETPCContactsAPI.csproj", "{1E3B6F49-6303-431E-BBA0-924BCBBB879E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E3B6F49-6303-431E-BBA0-924BCBBB879E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3B6F49-6303-431E-BBA0-924BCBBB879E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3B6F49-6303-431E-BBA0-924BCBBB879E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3B6F49-6303-431E-BBA0-924BCBBB879E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {509BFE9B-675B-4715-A451-5701E07F9EBC}
+	EndGlobalSection
+EndGlobal
