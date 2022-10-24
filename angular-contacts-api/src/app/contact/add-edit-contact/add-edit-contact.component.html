@@ -1,0 +1,59 @@
+<form>
+    <div class="mb-3">
+        <label for="firstName" class="form-label">First name</label>
+        <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName">
+    </div>
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Last name</label>
+        <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" [(ngModel)]="email" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="text" class="form-control" [(ngModel)]="password" name="password">
+    </div>
+    <div class="mb-3">
+        <label for="categoryId" class="form-label">Category</label>
+        <select class="form-control" name="categoryId" id="categoryId" [(ngModel)]="categoryId">
+            <option *ngFor="let category of categoryList$|async" [value]="category.id">{{category.type}}</option>
+        </select>
+    </div>
+    <div class="mb-3" *ngIf="categoryId==3">
+        <label for="subcategoryId" class="form-label">Subcategory</label>
+        <select class="form-control" name="subcategoryId" id="subcategoryId" [(ngModel)]="subcategoryId">
+            <option *ngFor="let subcategory of subcategoryList$|async" [value]="subcategory.id">{{subcategory.type}}</option>
+        </select>
+    </div>
+    <div class="mb-3" *ngIf="categoryId==5">
+        <label for="newType" class="form-label">Add new category</label>
+        <input type="text" class="form-control" [(ngModel)]="newType" name="newType">
+        <button (click)="addCategory()" class="btn btn-primary">
+            Confirm
+        </button>
+    </div>
+    <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Phone number</label>
+        <input type="text" class="form-control" [(ngModel)]="phoneNumber" name="phoneNumber">
+    </div>
+    <div class="mb-3">
+        <label for="birthDay" class="form-label">Day</label>
+        <input type="text" class="form-control" [(ngModel)]="birthDay" name="birthDay">
+    </div>
+    <div class="mb-3">
+        <label for="birthMonth" class="form-label">Month</label>
+        <input type="text" class="form-control" [(ngModel)]="birthMonth" name="birthMonth">
+    </div>
+    <div class="mb-3">
+        <label for="birthYear" class="form-label">Year</label>
+        <input type="text" class="form-control" [(ngModel)]="birthYear" name="birthYear">
+    </div>
+    <button (click)="addContact()" *ngIf="contact.id==0" class="btn btn-primary">
+        Add
+    </button>
+    <button (click)="updateContact()" *ngIf="contact.id!=0" class="btn btn-primary">
+        Update
+    </button>
+</form>

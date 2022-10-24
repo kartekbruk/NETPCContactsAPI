@@ -1,0 +1,6 @@
+{{contact.firstName}} {{contact.lastName}}
+<li>Phone number: {{contact.phoneNumber}}</li>
+<li>Email: {{contact.email}}</li>
+<li>Password: {{contact.password}}</li>
+<li>Birthday: {{contact.birthDay}}.{{contact.birthMonth}}.{{contact.birthYear}}</li>
+{{categoriesMap.get(contact.categoryId)}} <div *ngIf="contact.categoryId==3">- {{subcategoriesMap.get(contact.subcategoryId)}}</div>
